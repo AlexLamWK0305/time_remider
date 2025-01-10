@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import axios from "axios"
-import Item from './Item';
-import TodayProducts from './TodayProducts'
+import Category from './Category'
 
 const App = () => {
 
   return (
     <div>
-      <Item></Item>
+      <Category></Category>
     </div>
   );
 };

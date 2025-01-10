@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from "axios"
 
 const Item = () => {
-  const [dateId, setDateId] = useState([]);
+  const [category, setCategory] = useState([]);
   const [itemQuantity, setItemQuantity] = useState([{ id: Number, quantity: Number }]);
   useEffect(() => {
     const fetchData = async () => {
@@ -20,10 +20,7 @@ const Item = () => {
         const idList = response.data.categoryList[4].productList;
         idList.shift();
         console.log(idList);
-        setDateId(response.data.categoryList[4].productList.map(id =>({
-            id: id.productUID,
-            productDisplayName: id.productDisplayName
-        })))
+
       } catch (err) {
         console.log(err);
       }
@@ -34,11 +31,7 @@ const Item = () => {
   return (
     <div>
         {
-            dateId.map((id) => {
-                return(
-                    <div>{id.id}</div>
-                )
-            })
+
         }
     </div>
   );

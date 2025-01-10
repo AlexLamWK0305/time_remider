@@ -1,22 +1,4 @@
-.slot-machine {
-  overflow: hidden;
-  height: 50px; /* Adjust based on your design */
-  width: 200px; /* Adjust based on your design */
-  position: relative;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-.slot-container {
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.5s ease-in-out; /* Smooth animation */
-}
-
-.slot-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 50px; /* Same as .slot-machine height */
-  width: 100%;
-  font-size: 1.5rem;
-  color: #333;
-}
