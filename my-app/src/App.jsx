@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Category from './Category'
-
+import Category from './product/Category'
 const App = () => {
 
   return (
