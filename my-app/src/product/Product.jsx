@@ -152,7 +152,7 @@ const Product = ({ categoryData, twoDishLunchIdList }) => {
     console.log(categoryData);
     return (
         <div className='flex flex-row'>
-            <div className='flex flex-row'>
+            <div className='flex flex-row test-border'>
                 {
                     twoDishLunchList.map(twoDishLunch => {
                         return (
@@ -174,21 +174,23 @@ const Product = ({ categoryData, twoDishLunchIdList }) => {
                     })
                 }
             </div>
-            <div>
+            <div className='flex flex-col test-border'>
                 {
                     categoryData.map(category => {
                         return (
                             <div>
                                 <h2>{category.categoryDisplayName}</h2>
-                                <div className='flex flex-row'>
+                                <div className='flex flex-row flex-wrap'>
                                     {
                                         category.productList.map(product => {
                                             return (
-                                                <ProductDetail
-                                                    productDisplayName={product.productDisplayName}
-                                                    remainingQuantity={product.remainingQuantity}
-                                                    unitPrice={product.productUnitPrice}
-                                                />
+                                                <div className='mr-5'>
+                                                    <ProductDetail
+                                                        productDisplayName={product.productDisplayName}
+                                                        remainingQuantity={product.remainingQuantity}
+                                                        unitPrice={product.unitPrice['TAKEOUT']}
+                                                    />
+                                                </div>
                                             )
                                         })
                                     }

@@ -810,7 +810,7 @@ const Category = () => {
     // }
 
     return (
-        <div>
+        <div className='p-2'>
             <Product
                 categoryData={categoryData}
                 twoDishLunchIdList={twoDishLunchIdList}
